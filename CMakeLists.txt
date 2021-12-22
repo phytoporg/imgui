@@ -182,7 +182,7 @@ if (FREETYPE_FOUND)
         ${IMGUI_MISC_DIR}/freetype/imgui_freetype.cpp
     )
 
-    if (FALSE)
+    if (FREETYPE_LIBRARIES AND FREETYPE_INCLUDE_DIRS)
         target_include_directories(imgui-freetype INTERFACE ${FREETYPE_INCLUDE_DIRS})
         target_link_libraries(imgui-freetype INTERFACE ${FREETYPE_LIBRARIES})
     else ()
